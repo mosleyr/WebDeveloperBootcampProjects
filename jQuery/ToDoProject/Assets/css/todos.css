@@ -3,6 +3,9 @@ body {
     color: black;
     text-decoration: none;
     font-family: Roboto;
+    background: #FEAC5E;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 h1 {
@@ -32,6 +35,16 @@ li:nth-child(2n) {
     background-color: #f7f7f7;
 }
 
+span {
+    background-color: #e74c3c;
+    height: 40px;
+    margin-right: 20px;
+    text-align: center;
+    color: white;
+    width: 40px;
+    display: inline-block;
+}
+
 input {
     font-size: 18px;
     background-color: #f7f7f7;
@@ -57,4 +70,8 @@ input:focus {
 .completed {
     color: gray;
     text-decoration: line-through;
+}
+
+.fa-plus {
+    float: right;
 }
