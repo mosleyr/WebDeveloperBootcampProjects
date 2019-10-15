@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Paper.js Exercise</title>
+    <!-- Load the Paper.js library -->
+    <script type="text/javascript" src="paper-full.js"></script>
+    <link rel="stylesheet" type="text/css" href="paperExercise.css">
+
+    <!-- Define inlined PaperScript associate it with myCanvas -->
+    <script type="text/paperscript" canvas="myCanvas">
+        // Set the number of rows/columns using count variables
+        var countCols = 10;
+        var countRows = 10;
+        var posCols = 50;
+        var posRows = 50;
+
+        // Create a circle
+        var circle = new Path.Circle(new Point(50, 50), 5);
+        circle.visible = false;
+        circle.fillColor = 'red';
+
+        // Clone a circle
+        //var clonedCircle = circle.clone();
+
+
+        for (var i = 0; i < countRows; i++)
+        {
+         var r = 0.1;
+         var g = 0.1;
+         var b = 0.1;
+            for (var j = 0; j < countCols; j++)
+            {
+
+                    //posRows = posRows * i;
+                    //posCols = posCols * j;
+                    var clonedCircle = circle.clone();
+                    clonedCircle.visible = true;
+                    clonedCircle.fillColor = new Color(i * r, g, j* b);
+                    clonedCircle.position += new Point(posCols, posRows);
+                    posCols = posCols + 50;
+            }
+           posRows = posRows + 50;
+           posCols = 50;
+           g = g + 0.1;
+        }
+
+    </script>
+</head>
+<body>
+<canvas id="myCanvas" resize></canvas>
+
+
+</body>
+</html>
