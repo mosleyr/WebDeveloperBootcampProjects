@@ -24,3 +24,19 @@ Each Campground has:
 #Style the Navbar and Form
 * Add a navbar to all templates
 * Style the new campground form
+
+#Our First Mongo Commands
+* mongod: starts the mango deamon
+* mongo: opens the mongo shell
+* help: gives a list of basic features of mongo
+* show dbs: shows databases
+* use
+* insert
+* find
+* update
+* remove
+
+#Add Mongoose
+* Install and configure Mongoose
+* Setup campground model
+* Use campgroud model inside of our routes
